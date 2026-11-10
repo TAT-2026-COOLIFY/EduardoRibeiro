@@ -1,0 +1,15 @@
+.git
+.gitignore
+
+printhub-back/.env
+printhub-back/vendor
+printhub-back/node_modules
+printhub-back/storage/logs
+printhub-back/.phpunit.cache
+printhub-back/tests
+
+printhub-front/.env*
+printhub-front/node_modules
+printhub-front/build
+printhub-front/dist
+printhub-front/coverage
