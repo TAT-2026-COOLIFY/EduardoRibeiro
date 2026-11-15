@@ -48,8 +48,6 @@ services:
     build:
       context: .
       dockerfile: docker/nginx/Dockerfile
-    ports:
-      - "127.0.0.1:8000:80"
     volumes:
       - ./printhub-back:/var/www/html:ro
       - backend_storage:/var/www/html/storage:ro
@@ -67,8 +65,6 @@ services:
       dockerfile: printhub-front/Dockerfile
       args:
         VITE_API_URL: ${VITE_API_URL:-http://localhost:8000/api}
-    ports:
-      - "127.0.0.1:3000:80"
     depends_on:
       - backend-nginx
     healthcheck:
